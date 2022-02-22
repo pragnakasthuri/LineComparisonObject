@@ -2,10 +2,10 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
-public class CheckEqualityOfLinesUC2 {
+public class LineComparisonUsingCompareToUC3 {
     /**
      * @param scanner
-     * @return object containing int values2
+     * @return object containing int values
      */
     public static Line createLine(Scanner scanner) {
         System.out.println("Creating new line ");
@@ -34,16 +34,19 @@ public class CheckEqualityOfLinesUC2 {
         System.out.println("Length of line2 : " + line2.getLineLength());
         scanner.close();
         /**
-         * converting the values to String and checking if they are equal or not
+         * Converting to Integer wrapper class and checking for equality
          */
-        String val1=String.valueOf(line1.getLineLength());
-        String val2=String.valueOf(line2.getLineLength());
-
-        if(val1.equals(val2)){
-            System.out.println("Both lines are equal");
+        Integer val1=Integer.valueOf(line1.getLineLength());
+        Integer val2=Integer.valueOf(line2.getLineLength());
+        int compareVal = val1.compareTo(val2);
+        if(compareVal == 0){
+            System.out.println("Length of both lines are equal");
         }
-        else {
-            System.out.println("Both lines are not equal");
+        else if(compareVal == 1){
+            System.out.println("Length of line 1 is greater than line 2");
+        }
+        else{
+            System.out.println("Length of line 1 is less than line 2");
         }
     }
 }
