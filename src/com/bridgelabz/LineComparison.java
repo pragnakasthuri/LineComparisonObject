@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 /**
  * Start with Displaying
- * Welcome to LineComparison Computation Program 
+ * Welcome to LineComparison Computation Program
  */
 public class LineComparison {
     public static void main(String[] args) {
